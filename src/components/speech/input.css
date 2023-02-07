@@ -1,0 +1,30 @@
+#create-button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-left: none;
+    display: grid;
+    margin: 2px;
+}
+
+.speech-input input{
+    padding-right: 5em;
+}
+
+.speech-input .mic > i{
+    margin-left: 0.75em;
+}
+
+.spinner{
+    animation: loading 3s infinite linear;
+}
+
+@keyframes loading{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
