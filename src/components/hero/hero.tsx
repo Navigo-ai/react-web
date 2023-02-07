@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({title, subtitle, btnTxt, btnUrl}) => {
                 </div>
                 </div>
                 <div className="bottom overflow-hidden">
-                    <img src={ai} alt="Example image" width="700" height="500" loading="lazy"></img>
+                    <img src={ai} alt="Example image" width="500" height="500" loading="lazy"></img>
                 </div>
             </div>
         </>
