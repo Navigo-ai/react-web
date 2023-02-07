@@ -1,6 +1,6 @@
 {
   "name": "react-web",
-  "homepage": "https://navigo-ai.github.io/web-app",
+  "homepage": "https://navigo-ai.github.io/react-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
