@@ -46,8 +46,8 @@ const Speech_Input = () => {
 
   return (
     <div className="form speech-input">
-      <i className="left-icon fa-solid fa-wand-magic"></i>
-      <input type="text" className="form-control form-input" placeholder="Type anything..." value={text} onChange={handleChange}></input>
+      {text.length < 20 && <i className="left-icon fa-solid fa-wand-magic"></i>}
+      <input type="text" maxLength={99} className="form-control form-input" placeholder="Type anything..." value={text} onChange={handleChange}></input>
       {text && !useSpeech ? (
         <span id='create-button'>
             <button className="btn btn-primary">Create</button>

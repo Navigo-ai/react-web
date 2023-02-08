@@ -8,6 +8,10 @@
     margin: 2px;
 }
 
+.speech-input input{
+    padding-right: 5em;
+}
+
 .speech-input .mic > i{
     margin-left: 0.75em;
 }
