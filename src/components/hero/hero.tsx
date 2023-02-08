@@ -1,5 +1,6 @@
 import React from 'react';
 import ai from  '../../ai.webp'
+import Speech_Input from '../speech/input';
 import './hero.css';
 export interface HeroProps{
     title: string;
@@ -16,11 +17,7 @@ const Hero: React.FC<HeroProps> = ({title, subtitle, btnTxt, btnUrl}) => {
                 <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">{subtitle}</p>
                 <div className="form">
-                    <i className="left-icon fa-solid fa-wand-magic"></i>
-                  <input type="text" className="form-control form-input" placeholder="Type anything..."></input>
-                  <span className="left-pan">
-                    <i className="fa-solid fa-microphone"></i>
-                  </span>
+                    <Speech_Input></Speech_Input>
                 </div>
                 </div>
                 <div className="bottom overflow-hidden">
