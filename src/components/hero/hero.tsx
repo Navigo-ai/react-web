@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({title, subtitle, btnTxt, btnUrl}) => {
                 <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">{subtitle}</p>
                 <div className="form">
-                    <Speech_Input></Speech_Input>
+                    <Speech_Input route={'/create'}></Speech_Input>
                 </div>
                 </div>
                 <div className="bottom overflow-hidden">

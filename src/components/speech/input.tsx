@@ -1,9 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './input.css';
-const Speech_Input = () => {
+
+export interface ISpeech_InputProps{
+    route:string;
+}
+
+const Speech_Input: React.FC<ISpeech_InputProps> = ({route}) => {
     const [useSpeech, setUseSpeech] = useState(false);
     const [text, setText] = useState('');
     const recognition = useRef<any | null>(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         recognition.current = new ((window as any).webkitSpeechRecognition)();
@@ -50,7 +59,7 @@ const Speech_Input = () => {
       <input type="text" maxLength={99} className="form-control form-input" placeholder="Type anything..." value={text} onChange={handleChange}></input>
       {text && !useSpeech ? (
         <span id='create-button'>
-            <button className="btn btn-primary">Create</button>
+            <button className="btn btn-primary" onClick={() => navigate(route)}>Create</button>
         </span>
       ) : (
         <span className="mic" onClick={handleClick}>
