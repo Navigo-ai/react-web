@@ -1,18 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
 import data from '../session/data';
 import imageBlob from '../session/data';
 
 const Create: React.FC = () => {
-    console.log(data.blob);
-    const objectUrl = data.blob && data.blob instanceof Blob ? URL.createObjectURL(data.blob) : '';
+    const navigate = useNavigate();
+    const objectUrl = data.blob && data.blob instanceof Blob ? URL.createObjectURL(data.blob) : null;
+
+    useEffect(() => {
+        if (!objectUrl) {
+          navigate('/');
+        }
+    }, [objectUrl, navigate]);
 
     return (
         <>
             <Navbar></Navbar>
-            <section>
-                <img src={objectUrl} alt="Image from Blob" />
+            <section className="mt-5">
+                <div className='d-flex justify-content-center'>
+                    <div className="card" style={{width:"18em"}}>
+                        <img src={objectUrl!} className="card-img-top" alt="Image from Blob" />
+                    </div>
+                </div>
             </section>
         </>
     );
