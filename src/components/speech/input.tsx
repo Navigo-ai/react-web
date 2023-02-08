@@ -29,7 +29,8 @@ const Speech_Input: React.FC<ISpeech_InputProps> = ({route}) => {
                     setUseSpeech(false);
                     recognition.current?.stop();
                 } else {
-                interimTranscript += transcript;
+                    interimTranscript += transcript;
+                    setText(interimTranscript);
                 }
             }
         };

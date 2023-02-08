@@ -7,6 +7,8 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from '../components/navbar/Navbar';
 import Create from '../pages/create';
+import Ship from '../pages/ship';
+import Print from '../pages/print';
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home></Home>}  />
-          <Route path="/home" element={<Home></Home>}  />
           <Route path="/create" element={<Create></Create>}  />
+          <Route path="/print" element={<Print></Print>}  />
+          <Route path="/ship" element={<Ship></Ship>}  />
         </Routes>
       </HashRouter>
     </>
