@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import './input.css';
 
 export interface ISpeech_InputProps{
+    btnTxt: string;
     route:string;
 }
 
-const Speech_Input: React.FC<ISpeech_InputProps> = ({route}) => {
+const Speech_Input: React.FC<ISpeech_InputProps> = ({btnTxt, route}) => {
     const [useSpeech, setUseSpeech] = useState(false);
     const [text, setText] = useState('');
     const recognition = useRef<any | null>(null);
@@ -60,7 +61,7 @@ const Speech_Input: React.FC<ISpeech_InputProps> = ({route}) => {
       <input type="text" maxLength={99} className="form-control form-input" placeholder="Type anything..." value={text} onChange={handleChange}></input>
       {text && !useSpeech ? (
         <span id='create-button'>
-            <button className="btn btn-primary" onClick={() => navigate(route)}>Create</button>
+            <button className="btn btn-primary" onClick={() => navigate(route)}>{btnTxt}</button>
         </span>
       ) : (
         <span className="mic" onClick={handleClick}>

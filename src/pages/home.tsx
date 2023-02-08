@@ -8,8 +8,8 @@ const Home: React.FC = () => {
                 <Hero
                 title='Navigo'
                 subtitle='Create. Print. Ship.'
-                btnTxt='Start'
-                btnUrl='/'
+                btnTxt='Create'
+                btnUrl='/create'
                 ></Hero>
         </section>
     );
