@@ -29,7 +29,7 @@ const Upload_Input: React.FC<ISpeech_InputProps> = ({route}) => {
             <input className='d-none' type="file" id="img" name="img" accept="image/*" onChange={handleImageUpload}></input>
             <small className='m-2 pointer text-muted'>
                 <i className="fa-solid fa-arrow-up-from-bracket mx-2"></i>
-                Upload
+                Upload my own image
             </small>
         </label>
     );

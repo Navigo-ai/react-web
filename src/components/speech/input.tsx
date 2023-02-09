@@ -58,7 +58,7 @@ const Speech_Input: React.FC<ISpeech_InputProps> = ({btnTxt, route}) => {
   return (
     <div className="form speech-input">
       {text.length < 20 && <i className="left-icon fa-solid fa-wand-magic"></i>}
-      <input type="text" maxLength={99} className="form-control form-input" placeholder="Type anything..." value={text} onChange={handleChange}></input>
+      <input type="text" maxLength={99} className="form-control form-input" placeholder="Imagine..." value={text} onChange={handleChange}></input>
       {text && !useSpeech ? (
         <span id='create-button'>
             <button className="btn btn-primary" onClick={() => navigate(route)}>{btnTxt}</button>
