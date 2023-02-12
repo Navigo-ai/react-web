@@ -1,62 +1,54 @@
-.hero .form{
-    position: relative;
+.hero .form {
+  position: relative;
 }
-.hero .height{
-
-    height: 100vh;
+.hero .height {
+  height: 100vh;
 }
-.hero .form .left-icon{
-
-    position: absolute;
-    top:20px;
-    left: 20px;
-    color: #9ca3af;
-
+.hero .form .left-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #9ca3af;
 }
 
-.hero .form span{
-
-        position: absolute;
-    right: 17px;
-    top: 13px;
-    padding: 2px;
-    border-left: 1px solid #d1d5db;
-
+.hero .form span {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db;
 }
 
-.hero .left-pan{
-    padding-left: 7px;
+.hero .left-pan {
+  padding-left: 7px;
 }
 
-.hero .left-pan i{
-   
-   padding-left: 10px;
+.hero .left-pan i {
+  padding-left: 10px;
 }
 
-.hero .form-input{
-
-    height: 55px;
-    text-indent: 33px;
-    border-radius: 10px;
+.hero .form-input {
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px;
 }
 
-.hero .form-input:focus{
-
-    box-shadow: none;
-    border:none;
+.hero .form-input:focus {
+  box-shadow: none;
+  border: none;
 }
 
-.bottom{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50vh;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
-.bottom img{
-    max-width: 100vw;
-    max-height: 100vw;
+.bottom img {
+  max-width: 100vw;
+  max-height: 100vw;
 }
