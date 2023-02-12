@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './input.css';
 
-export interface ISpeech_InputProps{
+export interface ISpeechInputProps{
     btnTxt: string;
     route:string;
 }
 
-const Speech_Input: React.FC<ISpeech_InputProps> = ({btnTxt, route}) => {
+const SpeechInput: React.FC<ISpeechInputProps> = ({btnTxt, route}) => {
     const [useSpeech, setUseSpeech] = useState(false);
     const [text, setText] = useState('');
     const recognition = useRef<any | null>(null);
@@ -39,7 +39,7 @@ const Speech_Input: React.FC<ISpeech_InputProps> = ({btnTxt, route}) => {
         return () => {
             recognition.current?.abort();
         };
-  }, []);
+  }, [text]);
 
   const handleClick = () => {
     if (!useSpeech) {
@@ -73,4 +73,4 @@ const Speech_Input: React.FC<ISpeech_InputProps> = ({btnTxt, route}) => {
   );
 };
 
-export default Speech_Input;
+export default SpeechInput;

@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
-import gootenClient from '../services/gooten/client';
 import data from '../session/data';
-import imageBlob from '../session/data';
 
 const Create: React.FC = () => {
     const navigate = useNavigate();
@@ -19,7 +17,7 @@ const Create: React.FC = () => {
             <section className="mt-5">
                 <div className='d-flex justify-content-center'>
                     <div className="card" style={{width:"18em"}}>
-                        <img src={objectUrl!} className="card-img-top" alt="Image from Blob" />
+                        <img src={objectUrl!} className="card-img-top" alt="Create blob" />
                     </div>
                 </div>
             </section>

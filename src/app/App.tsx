@@ -1,14 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/home';
 
-import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from '../components/navbar/Navbar';
 import Create from '../pages/create';
-import Ship from '../pages/ship';
 import Print from '../pages/print';
+import Ship from '../pages/ship';
+import './App.css';
 
 function App() {
   return (

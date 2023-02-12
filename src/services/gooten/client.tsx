@@ -13,7 +13,6 @@ class GootenClient {
         baseURL: 'https://api.print.io/api/v/5/source/api/',
         timeout: 15000,
     });
-    constructor(){}
 
     responseBody = (response: AxiosResponse) => response.data;
 

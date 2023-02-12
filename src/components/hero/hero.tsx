@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import ai from  '../../ai.webp'
-import Speech_Input from '../speech/input';
-import Upload_Input from '../upload/input';
+import React from 'react';
+import ai from '../../ai.webp';
+import SpeechInput from '../speech/input';
+import UploadInput from '../upload/input';
 import './hero.css';
 export interface HeroProps{
     title: string;
@@ -19,12 +19,12 @@ const Hero: React.FC<HeroProps> = ({title, subtitle, btnTxt, btnUrl}) => {
                 <div className="col-lg-6 mx-auto">
                     <p className="lead mb-4">{subtitle}</p>
                     <div className="form">
-                        <Speech_Input route={btnUrl} btnTxt={btnTxt}></Speech_Input>
-                        <Upload_Input route={btnUrl}></Upload_Input>
+                        <SpeechInput route={btnUrl} btnTxt={btnTxt}></SpeechInput>
+                        <UploadInput route={btnUrl}></UploadInput>
                     </div>
                 </div>
                 <div className="bottom overflow-hidden">
-                    <img src={ai} alt="Example image" width="500" height="500" loading="lazy"></img>
+                    <img src={ai} alt="AI" width="500" height="500" loading="lazy"/>
                 </div>
             </div>
         </>

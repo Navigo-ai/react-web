@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import data from '../../session/data';
-import imageBlob from '../../session/data';
 
 import './input.css';
 
-export interface ISpeech_InputProps{
+export interface IUploadInputProps{
     route:string;
 }
 
-const Upload_Input: React.FC<ISpeech_InputProps> = ({route}) => {
+const UploadInput: React.FC<IUploadInputProps> = ({route}) => {
     const navigate = useNavigate();
 
     const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,4 +34,4 @@ const Upload_Input: React.FC<ISpeech_InputProps> = ({route}) => {
     );
 };
 
-export default Upload_Input;
+export default UploadInput;
