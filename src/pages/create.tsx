@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/navbar/Navbar';
+import gootenClient from '../services/gooten/client';
 import data from '../session/data';
 import imageBlob from '../session/data';
 
@@ -9,9 +10,7 @@ const Create: React.FC = () => {
     const objectUrl = data.blob && data.blob instanceof Blob ? URL.createObjectURL(data.blob) : null;
 
     useEffect(() => {
-        if (!objectUrl) {
-          navigate('/');
-        }
+        if (!objectUrl) { navigate('/'); }
     }, [objectUrl, navigate]);
 
     return (
